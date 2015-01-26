@@ -16,7 +16,7 @@ public class SqliteopenHelper extends SQLiteOpenHelper {
 
 	  SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     // Database Name
-    private static final String DATABASE_NAME = "MiwiConnectFour";
+    private static final String DATABASE_NAME = "TISensorTAG";
 
     // Table Names
     private static final String TABLE_SENSOR_DATA = "TISensorData";
