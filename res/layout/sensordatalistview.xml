@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/textsensordata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#677982"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Sensor Data"
+         />
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:orientation="horizontal" >
+     
+
+    <TextView
+        android:id="@+id/textirtemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:paddingLeft="8dp"
+          android:textColor="#677982"
+        android:textSize="15sp"
+        android:text="IR-TEMP" />
+
+     <TextView
+        android:id="@+id/textambtemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:paddingLeft="8dp"
+          android:textColor="#677982"
+        android:textSize="15sp"
+        android:text="AMB-TEMP" />
+    
+    <TextView
+        android:id="@+id/texthumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:paddingLeft="8dp"
+          android:textColor="#677982"
+        android:textSize="15sp"
+        android:text="HUMID" />
+    
+     <TextView
+        android:id="@+id/textbarometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:paddingLeft="8dp"
+           android:textColor="#677982"
+        android:textSize="15sp"
+        android:text="BARO" />
+     
+      <TextView
+        android:id="@+id/textdatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:paddingLeft="8dp"
+           android:textColor="#677982"
+        android:textSize="15sp"
+        android:text="DATE" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="338dp"
+        android:layout_weight="0.93" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btnsavetofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.11"
+        android:text="Export to Txt File" />
+
+</LinearLayout>
