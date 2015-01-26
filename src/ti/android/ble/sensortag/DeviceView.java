@@ -106,7 +106,7 @@ public class DeviceView extends Fragment {
     mInstance = this;
     mActivity = (DeviceActivity) getActivity();
     db= new SqliteopenHelper(getActivity().getApplicationContext());
-   
+    sensordatapojo= new SensorDatapojo();
     //csv=android.os.Environment.getExternalStorageDirectory()+"/CsvData";
     
     // The last two arguments ensure LayoutParams are inflated properly.
@@ -171,7 +171,7 @@ public class DeviceView extends Fragment {
   public void onCharacteristicChanged(String uuidStr, byte[] rawValue) {
 		Point3D v;
 		String msg;
-
+		//sensordatapojo= new SensorDatapojo();
   	if (uuidStr.equals(UUID_ACC_DATA.toString())) {
   		v = Sensor.ACCELEROMETER.convert(rawValue);
   		msg = decimal.format(v.x) + "\n" + decimal.format(v.y) + "\n" + decimal.format(v.z) + "\n";
@@ -227,7 +227,7 @@ public class DeviceView extends Fragment {
   		
   	}
     
-  	//db.createSensorData(sensordatapojo);
+  	db.createSensorData(sensordatapojo);
   	
   	if (uuidStr.equals(UUID_KEY_DATA.toString())) {
   		SimpleKeysStatus s;
