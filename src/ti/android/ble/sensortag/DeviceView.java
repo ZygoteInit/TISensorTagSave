@@ -67,7 +67,11 @@ import android.widget.Toast;
 public class DeviceView extends Fragment {
 	
 	private static final String TAG = "DeviceView";
+	
+	// Umer abbassi: This is variable for Database Class Object which is SqliteOpenHelper in "ti.android.sqlite" package
 	SqliteopenHelper db;
+	
+	
   // Sensor table; the iD corresponds to row number
 	private static final int ID_OFFSET = 0;
     private static final int ID_KEY = 0;
@@ -105,8 +109,14 @@ public class DeviceView extends Fragment {
     Log.i(TAG, "onCreateView");
     mInstance = this;
     mActivity = (DeviceActivity) getActivity();
+    
+ // Umer abbassi: This is initialization of db variable which takes the Context of current activity object as an argument
     db= new SqliteopenHelper(getActivity().getApplicationContext());
+   
+ // Umer abbassi: this is Variable Holder class for The DB table of our attirbutes here it is being initialized this SensordataPojo is also in "ti.android.sqlite" package
     sensordatapojo= new SensorDatapojo();
+    
+    
     //csv=android.os.Environment.getExternalStorageDirectory()+"/CsvData";
     
     // The last two arguments ensure LayoutParams are inflated properly.
@@ -176,6 +186,8 @@ public class DeviceView extends Fragment {
   		v = Sensor.ACCELEROMETER.convert(rawValue);
   		msg = decimal.format(v.x) + "\n" + decimal.format(v.y) + "\n" + decimal.format(v.z) + "\n";
   		mAccValue.setText(msg);
+  	
+  	// Umer abbassi: here adding the accelerometer value in our SensorDataPojo object
   		sensordatapojo.setAccelerometer(msg);
   		
   	} 
@@ -185,6 +197,8 @@ public class DeviceView extends Fragment {
   		msg = decimal.format(v.x) + "\n" + decimal.format(v.y) + "\n" + decimal.format(v.z) + "\n";
   		//
   		mMagValue.setText(msg);
+  		
+  	// Umer abbassi: here adding the Magnometer value in our SensorDataPojo object
   		sensordatapojo.setMagnometer(msg);
   	} 
 
@@ -193,6 +207,8 @@ public class DeviceView extends Fragment {
   		msg = decimal.format(v.x) + "\n" + decimal.format(v.y) + "\n" + decimal.format(v.z) + "\n";
   		//
   		mGyrValue.setText(msg);
+  		
+  	// Umer abbassi: here adding the Gyroscope value in our SensorDataPojo object
   		sensordatapojo.setGyroscope(msg);
   		
   		
@@ -205,6 +221,8 @@ public class DeviceView extends Fragment {
   		sensordatapojo.setAMBTemperature(msg);
   		msg = decimal.format(v.y) + "\n";
   		mObjValue.setText(msg);
+  		
+  	// Umer abbassi: here adding the Temperature value in our SensorDataPojo object
   		sensordatapojo.setIRTemperature(msg);
   		
   	}
@@ -213,6 +231,8 @@ public class DeviceView extends Fragment {
   		v = Sensor.HUMIDITY.convert(rawValue);
   		msg = decimal.format(v.x) + "\n";
   		mHumValue.setText(msg);
+  		
+  	 	// Umer abbassi: here adding the Humidity value in our SensorDataPojo object
   		sensordatapojo.setHumidity(msg);
   		//WriteToCSV("Humidity", msg);
   	}
@@ -223,10 +243,13 @@ public class DeviceView extends Fragment {
   		h = (double)Math.round(-h * 10.0) / 10.0;
   		msg = decimal.format(v.x/100) + "\n" + h;
   		mBarValue.setText(msg);
+  		
+  	 	// Umer abbassi: here adding the Barometer value in our SensorDataPojo object
   		sensordatapojo.setBarometer(msg);
   		
   	}
     
+ 	// Umer abbassi: here adding the  SensorDataPojo object to Db Table by calling the CreateSensorData which takes SensorDataPojo object as an argument
   	db.createSensorData(sensordatapojo);
   	
   	if (uuidStr.equals(UUID_KEY_DATA.toString())) {

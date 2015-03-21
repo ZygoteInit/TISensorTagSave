@@ -26,45 +26,45 @@
         android:id="@+id/textirtemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:paddingLeft="8dp"
+         android:paddingLeft="5dp"
           android:textColor="#677982"
-        android:textSize="15sp"
-        android:text="IR-TEMP" />
+        android:textSize="12sp"
+        android:text="IR-TEMP °c" />
 
      <TextView
         android:id="@+id/textambtemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:paddingLeft="8dp"
+         android:paddingLeft="5dp"
           android:textColor="#677982"
-        android:textSize="15sp"
-        android:text="AMB-TEMP" />
+        android:textSize="12sp"
+        android:text="AMB-TEMP °c" />
     
     <TextView
         android:id="@+id/texthumidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:paddingLeft="8dp"
+         android:paddingLeft="5dp"
           android:textColor="#677982"
-        android:textSize="15sp"
-        android:text="HUMID" />
+        android:textSize="12sp"
+        android:text="HUM %rH" />
     
      <TextView
         android:id="@+id/textbarometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:paddingLeft="8dp"
+         android:paddingLeft="5dp"
            android:textColor="#677982"
-        android:textSize="15sp"
-        android:text="BARO" />
+        android:textSize="12sp"
+        android:text="BAR hPA-m" />
      
       <TextView
         android:id="@+id/textdatetime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:paddingLeft="8dp"
+         android:paddingLeft="5dp"
            android:textColor="#677982"
-        android:textSize="15sp"
+        android:textSize="12sp"
         android:text="DATE" />
     </LinearLayout>
 

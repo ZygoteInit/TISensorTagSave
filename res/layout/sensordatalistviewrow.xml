@@ -23,34 +23,34 @@
         android:id="@+id/textirtemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:paddingLeft="8dp"
-        android:text="" />
+         android:paddingLeft="5dp"
+        android:text="+99.9" />
     
       <TextView
         android:id="@+id/textambtemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:paddingLeft="8dp"
-        android:text="" />
+         android:paddingLeft="5dp"
+        android:text="+99.9" />
 
     <TextView
         android:id="@+id/texthumidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:paddingLeft="8dp"
-        android:text="  " />
+         android:paddingLeft="5dp"
+        android:text="+99.9" />
     
      <TextView
         android:id="@+id/textbarometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:paddingLeft="8dp"
-        android:text="  " />
+         android:paddingLeft="5dp"
+        android:text="+99.9555" />
       
       <TextView
         android:id="@+id/textdatetime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:paddingLeft="8dp"
-        android:text="  " />
+         android:paddingLeft="5dp"
+        android:text="2015/01/30 23:01:07 " />
 </LinearLayout>
